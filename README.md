@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< Updated upstream
+=======
+
+test
+
+test2
+>>>>>>> Stashed changes
