@@ -1,29 +1,43 @@
-# README
+## cardsテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|-----|----|-------|
+|card_id|integer|null: false|
+|card_month|integer|null: false|
+|card_year|integer|null: false|
+|security_code|integer|null: false|
+|user_id|integer|null: false,　foreign_key:true|
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-test2
+### Association
+- belongs-to: user
 
 
-test3
+
+## commentsテーブル
+
+|Column|Type|Options|
+|-----|----|-------|
+|comment|text|null: false
+|user_id|integer|null:false,　foreign_key:true|
+|product_id|integer|null: false,　foreign_key:true|
+
+### Association
+- belongs-to: user
+- belongs-to: product
+
+
+
+## user_addressesテーブル
+
+|Column|Type|Options|
+|-----|----|-------|
+|postal_code|integer|null: false|
+|prefecture|integer|null:false|
+|city|integer|null:false|
+|address|integer|null:false|
+|apartment|string||
+|user_id|integer|null:false,　foreign_key:true|
+
+
+### Association
+- belongs-to: user
